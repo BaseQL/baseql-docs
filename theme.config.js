@@ -12,9 +12,10 @@ export default {
   footerEditOnGitHubLink: true,                    // will link to the docs repo
   logo: (
     <React.Fragment>
-      <span className="mr-2 font-extrabold hidden md:inline text-indigo-500">BaseQL</span>
+      <img src="/baseql_logo_h_alpha.png" style={{height: "30px", marginRight: "8px"}} />
+      {/* <span className="mr-2 font-extrabold hidden md:inline text-indigo-500">BaseQL</span> */}
       <span className="text-gray-600 font-normal hidden md:inline">
-        Documentation
+        Docs
       </span>
     </React.Fragment>
   ),
