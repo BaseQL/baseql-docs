@@ -10,6 +10,7 @@
     "nextra": "^0.2.6",
     "nextra-theme-docs": "^0.2.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-iframe": "^1.8.0"
   }
 }
