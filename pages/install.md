@@ -1,6 +1,6 @@
 # Installation
 
-To install Airtable's app you have two options
+To install Airtable's app you have two options:
 
 ## Airtable Pro
 

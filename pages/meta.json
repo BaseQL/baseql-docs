@@ -1,5 +1,8 @@
 {
   "index": "Introduction",
+  "install": "Installation",
+  "usage": "Usage",
   "playground": "Playground",
-  "install": "Installation"
+  "examples": "Example Code",
+  "tutorials": "Tutorials"
 }
