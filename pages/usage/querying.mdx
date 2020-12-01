@@ -11,10 +11,6 @@ You can query nested values at an arbitriary deep level:
 <QueryPlayground disabled={true} query={`{
 people(name: "ben") {
   name
-  city {
-    name
-    state
-  }
   friends {
     name
     friends {
@@ -29,7 +25,7 @@ BaseQL support querying most Airtable data types, checkout our [`StangerThings` 
 
 <br />
 
-<QueryPlayground query={`{
+<QueryPlayground disabled={true} query={`{
 people(name: "ben") {
   name
 }\n}`}/>

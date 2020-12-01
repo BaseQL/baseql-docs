@@ -9,6 +9,9 @@ const styles = {
     boxSizing: 'border-box',
     fontFamily: '"Dank Mono", "Fira Code", monospace',
     borderRadius: '8px',
+    flex: 1,
+    overflow: 'visible',
+    margin: '4px',
     ...theme.plain
   }
 }
