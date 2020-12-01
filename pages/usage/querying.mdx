@@ -1,13 +1,27 @@
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview
-} from 'react-live'
-import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
-import Query from '../../components/query';
+import QueryPlayground from '../../components/query-editor';
 
 # Querying
+
+## Nested Values
+
+You can query nested values at an arbitriary deep level:
+
+<br />
+
+<QueryPlayground query={`{
+people(name: "ben") {
+  name
+  city {
+    name
+    state
+  }
+  friends {
+    name
+    friends {
+      name
+    }
+  }
+}\n}`}/>
 
 ## Data Types
 
@@ -15,18 +29,7 @@ BaseQL support querying most Airtable data types, checkout our [`StangerThings` 
 
 <br />
 
-<LiveProvider
-  scope={{Query}}
-  code={`<Query>
-    s
-  </Query>`}
-  theme={oceanicNext}
->
-  <div style={{display: "flex"}}>
-    <LiveEditor style={{borderRadius: '8px'}}/>
-    <LiveError />
-    <LivePreview />
-  </div>
-</LiveProvider>
-
-## Nested Values
+<QueryPlayground query={`{
+people(name: "ben") {
+  name
+}\n}`}/>
