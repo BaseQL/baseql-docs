@@ -18,7 +18,7 @@ people(
 
 ## Advanced DSL
 
-We support a filtering DSL similar to [MongoDB](https://docs.mongodb.com/manual/reference/operator/query/) and [Hasura](https://hasura.io/docs/1.0/graphql/core/queries/query-filters.html):
+We support a filtering DSL similar to [MongoDB](https://docs.mongodb.com/manual/reference/operator/query/) and [Hasura](https://hasura.io/docs/1.0/graphql/core/queries/query-filters.html) via `_filter` operator:
 
 <br />
 

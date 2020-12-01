@@ -25,9 +25,15 @@ export default function QueryPlayground({query, disabled = false}) {
     <div style={{width: '100%', maxHeight: '300px', display: 'flex', alignItems: 'stretch'}}>
       <QueryEditor query={query} disabled={disabled}/>
       <pre style={styles.results}>
-
-        {!data && <Loading />}
-        {!!data && <QueryHighlighter code={JSON.stringify(data, undefined, 2)} theme={theme} />}
+        {!data && !error && <Loading />}
+        {!!data && (
+          <QueryHighlighter code={JSON.stringify(data, undefined, 2)} theme={theme} />
+        )}
+        {!!error && (
+          <div>❌ Error: 
+            <QueryHighlighter code={JSON.stringify(error, undefined, 2)} theme={theme} />
+          </div>
+        )}
       </pre>
     </div>
   )
