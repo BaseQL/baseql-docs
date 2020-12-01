@@ -13,11 +13,15 @@ export default function QueryPlayground({query, disabled = false}) {
   return (
     <div style={{width: '100%', maxHeight: '300px', display: 'flex', alignItems: 'stretch'}}>
       <QueryEditor query={query} disabled={disabled}/>
-      <pre style={{whiteSpace: 'pre-wrap', flex: 1, margin: '4px'}}>
-        {/* <code>{JSON.stringify(data && data.people, undefined, 2)}</code> */}
-        <QueryHighlighter code={JSON.stringify(data && data.people, undefined, 2)} theme={theme} />
+      <pre style={{
+        whiteSpace: 'pre-wrap',
+        flex: 1,
+        margin: '4px',
+        padding: '10px',
+        fontFamily: '"Dank Mono", "Fira Code", monospace',
+      }}>
+        {!!data && <QueryHighlighter code={JSON.stringify(data, undefined, 2)} theme={theme} />}
       </pre>
-
     </div>
   )
 }
