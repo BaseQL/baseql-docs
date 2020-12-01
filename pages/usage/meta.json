@@ -1,7 +1,6 @@
 {
   "querying": "Querying",
-  "basic_filtering": "Basic Filtering",
-  "advanced_filtering": "Advanced Filtering",
+  "filtering": "Filtering",
   "sorting": "Sorting",
   "pagination": "Pagination",
   "mutations": "Mutations",
