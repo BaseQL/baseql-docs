@@ -10,7 +10,7 @@ const styles = {
     fontFamily: '"Dank Mono", "Fira Code", monospace',
     borderRadius: '8px',
     flex: 1,
-    overflow: 'visible',
+    overflow: 'scroll',
     margin: '4px',
     ...theme.plain
   }
