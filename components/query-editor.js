@@ -1,8 +1,8 @@
-import React, { Fragment, Component } from 'react'
+import { Component } from 'react'
 
 import Editor from 'react-simple-code-editor'
-import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/shadesOfPurple'
+import QueryHighlighter from './query-highlighter'
 
 const styles = {
   root: {
@@ -20,24 +20,13 @@ class QueryEditor extends Component {
     this.setState({ code })
   }
 
-  highlight = code => (
-    <Highlight {...defaultProps} theme={theme} code={code} language="graphql">
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <Fragment>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => <span {...getTokenProps({ token, key })} />)}
-            </div>
-          ))}
-        </Fragment>
-      )}
-    </Highlight>
-  )
+  highlight = code => (<QueryHighlighter code={code} theme={theme}/>)
 
   render() {
     return (
       <Editor
         value={this.state.code}
+        disabled={this.props.disabled}
         onValueChange={this.onValueChange}
         highlight={this.highlight}
         padding={10}
