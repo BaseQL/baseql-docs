@@ -46,6 +46,3 @@ function App () {
 }
 ```
 
-# Pokedex
-
-Live example, click the _"Edit on GitHub"_ link below to see the code.

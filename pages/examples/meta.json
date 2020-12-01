@@ -1,7 +1,7 @@
 {
   "curl": "cURL",
   "javascript": "Javascript",
-  "nextjs": "Next.js: Pokedex",
-  "gatsby": "Gatsby.js: Blog/CMS",
+  "nextjs": "Next.js",
+  "gatsby": "Gatsby.js",
   "vue": "Vue.js"
 }
