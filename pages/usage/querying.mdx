@@ -1,0 +1,32 @@
+import {
+  LiveProvider,
+  LiveEditor,
+  LiveError,
+  LivePreview
+} from 'react-live'
+import oceanicNext from 'prism-react-renderer/themes/oceanicNext';
+import Query from '../../components/query';
+
+# Querying
+
+## Data Types
+
+BaseQL support querying most Airtable data types, checkout our [`StangerThings` kitchensink base](https://airtable.com/shrjevFPtREOPPxWj):
+
+<br />
+
+<LiveProvider
+  scope={{Query}}
+  code={`<Query>
+    s
+  </Query>`}
+  theme={oceanicNext}
+>
+  <div style={{display: "flex"}}>
+    <LiveEditor style={{borderRadius: '8px'}}/>
+    <LiveError />
+    <LivePreview />
+  </div>
+</LiveProvider>
+
+## Nested Values

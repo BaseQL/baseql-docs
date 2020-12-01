@@ -11,6 +11,7 @@
     "nextra-theme-docs": "^0.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-iframe": "^1.8.0"
+    "react-iframe": "^1.8.0",
+    "react-live": "^2.2.3"
   }
 }
