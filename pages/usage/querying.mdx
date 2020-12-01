@@ -26,6 +26,11 @@ BaseQL support querying most Airtable data types, checkout our [`StangerThings` 
 <br />
 
 <QueryPlayground disabled={true} query={`{
-people(name: "ben") {
-  name
+strangerThings {
+  checkBox
+  rating
+  multiSelect
+  email
+  currency
+  attachments
 }\n}`}/>
