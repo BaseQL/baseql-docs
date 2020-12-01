@@ -8,7 +8,9 @@ export default {
   customSearch: null,                              // <- customizable, you can use algolia for example
   darkMode: true,
   footer: true,
-  footerText: 'Copyright 2020 © BaseQL',
+  footerText: (
+    <span>Copyright 2020 © <a href="https://www.baseql.com/" target="_blank">BaseQL</a></span>
+  ),
   footerEditOnGitHubLink: true,                    // will link to the docs repo
   logo: (
     <React.Fragment>
