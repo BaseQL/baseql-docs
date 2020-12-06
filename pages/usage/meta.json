@@ -3,6 +3,9 @@
   "filtering": "Filtering",
   "sorting": "Sorting",
   "pagination": "Pagination",
+  "multiple": "Multiple arguments",
   "mutations": "Mutations",
-  "search": "Search"
+  "search": "Full-text Search",
+  "aggregation": "Aggregation",
+  "caching": "Caching"
 }

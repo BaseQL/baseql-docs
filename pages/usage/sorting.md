@@ -1,7 +1,28 @@
-import Callout from 'nextra-theme-docs/callout'
+import QueryPlayground from '../../components/query-playground';
 
 # Sorting
 
-<Callout emoji="🚧">
-  Coming soon...
-</Callout>
+You can order by single or multiple columns and specify ascending or descending order:
+
+### Single
+
+<br />
+
+<QueryPlayground disabled={true} query={`{
+people(_order_by: "name") {
+  name
+}\n}`}/>
+
+### Multiple
+
+<br />
+
+<QueryPlayground disabled={true} query={`{
+people(_order_by: [
+  {vegan: "desc"},
+  "offspring"
+]) {
+  name,
+  vegan,
+  offspring
+}\n}`}/>
