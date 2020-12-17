@@ -3,5 +3,6 @@
   "install": "Installation",
   "usage": "Usage",
   "playground": "Playground",
-  "examples": "Example Code"
+  "examples": "Example Code",
+  "integrations": "Integrations"
 }
