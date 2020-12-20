@@ -1,39 +1,15 @@
-import Iframe from 'react-iframe'
+import Bleed from 'nextra-theme-docs/bleed'
 
-# Playground
+# Live Playground
 
 Get a feel of BaseQL features by directly querying our showcase base:
 
-<hr />
-
-<Iframe
-  url={`https://airtable.com/embed/shrEOln0TWjx2MAC9?backgroundColor=purple`}
-  frameborder="0"
-  style={{
-    overflow: "hidden",
-    height: "100%",
-    width: "100%",
-    background: "transparent",
-    border: "1px solid #ccc"
-  }}
-  onmousewheel="" 
-  height="300"
-  width="100%"
-/>
+<Bleed full>
+  <iframe width="100%" height="430" src="https://app.baseql.com/demos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+</Bleed>
 
 <hr />
 
-<Iframe
-  url={`https://app.baseql.com/demos`}
-  frameborder="0"
-  style={{
-    overflow: "hidden",
-    height: "100%",
-    width: "100%",
-    background: "transparent",
-    border: "1px solid #ccc"
-  }}
-  onmousewheel="" 
-  height="600"
-  width="100%"
-/>
+<Bleed full>
+  <iframe width="100%" height="430" src="https://airtable.com/embed/shrEOln0TWjx2MAC9?backgroundColor=purple" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+</Bleed>
