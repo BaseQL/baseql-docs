@@ -1,6 +1,9 @@
 export default {
   github: 'https://github.com/BaseQL',     // link of the project repo
   siteGithub: 'https://github.com/BaseQL/baseql-docs', // link of the docs repo path
+  repository: 'https://github.com/BaseQL/baseql-docs', // link of the docs repo path
+  docsRepository: 'https://github.com/BaseQL/baseql-docs', // docs repo
+  branch: 'main',
   titleSuffix: ' – BaseQL',
   nextLinks: true,
   prevLinks: true,
