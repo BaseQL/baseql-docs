@@ -13,6 +13,15 @@ people(_order_by: "name") {
   name
 }\n}`}/>
 
+### Direction
+
+<br />
+
+<QueryPlayground disabled={true} query={`{
+people(_order_by: {name: "desc"}) {
+  name
+}\n}`}/>
+
 ### Multiple
 
 <br />
