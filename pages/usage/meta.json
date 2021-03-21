@@ -5,7 +5,8 @@
   "pagination": "Pagination",
   "multiple": "Multiple arguments",
   "mutations": "Mutations",
-  "search": "Full-text Search",
+  "token": "Secret Token",
   "aggregation": "Aggregation",
+  "search": "Full-text Search",
   "caching": "Caching"
 }
