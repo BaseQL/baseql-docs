@@ -4,7 +4,7 @@ import Query from '../../components/query';
 # Mutations
 
 <Callout emoji="️❗️">
-  Mutations are enabled by default. If you want to protect them from the ourside wolrd consider enabling your [Secret Token](/usage/token)
+  Mutations are disabled by default. If you want to protect them from the outside world consider enabling your [Secret Token](/usage/settings) as well
 </Callout>
 
 Create, update and delete records

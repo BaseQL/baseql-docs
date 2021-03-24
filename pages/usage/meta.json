@@ -4,8 +4,8 @@
   "sorting": "Sorting",
   "pagination": "Pagination",
   "multiple": "Multiple arguments",
+  "settings": "Settings",
   "mutations": "Mutations",
-  "token": "Secret Token",
   "aggregation": "Aggregation",
   "search": "Full-text Search",
   "caching": "Caching"
