@@ -4,7 +4,7 @@
 
 ## Secret Token
 
-In order to protect your endpoints you can enable auth using a Secret Token.
+In order to protect your endpoints you can enable auth using a Token which is secret and unique per account.
 
 Use it along the `Authorization` HTTP header as a `Bearer` token.
 
