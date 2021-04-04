@@ -34,3 +34,15 @@ strangerThings {
   currency
   attachments
 }\n}`}/>
+
+### Sanitization
+
+BaseQL will automatically sanitize table and column names to comply with the [GraphQL Specification](http://spec.graphql.org/June2018/#sec-Names), by:
+- [Deburring](https://lodash.com/docs/4.17.15#deburr) special characters.
+- Trim spaces by [camelCase](https://lodash.com/docs/4.17.15#camelCase)’ing 
+- Prepending an underscore when it starts with a number
+
+Examples:
+
+- `   déjà vu%  ` -> `dejaVu`
+- `99Ballons` -> `_99Ballons`
