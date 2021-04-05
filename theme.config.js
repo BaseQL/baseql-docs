@@ -26,6 +26,17 @@ export default {
   ),
   head: (
     <React.Fragment>
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163884111-2"></script>
+      <script dangerouslySetInnerHTML={
+        { __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-163884111-2');
+        `}
+      }>
+      </script>
       <meta name="msapplication-TileColor" content="#4c51bf" />
       <meta name="theme-color" content="#4c51bf" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
