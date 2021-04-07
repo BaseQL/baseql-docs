@@ -2261,6 +2261,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
+grapheme-splitter@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
+  integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
+
 graphql-request@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-3.3.0.tgz#1b9003f34b73cd40d691803d2d422fde5c713af3"
@@ -3350,10 +3355,10 @@ next@^10.0.3:
   optionalDependencies:
     sharp "0.26.2"
 
-nextra-theme-docs@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/nextra-theme-docs/-/nextra-theme-docs-1.0.4.tgz#8d07d0ccf9c97e6fcd64f36f1164307cabe094b8"
-  integrity sha512-Jfa5Y7WmUdH5KZA9K9E+u019u5rdjjzeSYtUyc2JEsfJM9Pk0bsk4MSsCTtybf0UwB+axWgE618uGNzqnpJrGA==
+nextra-theme-docs@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/nextra-theme-docs/-/nextra-theme-docs-1.1.6.tgz#14a3bec4f76f8fbf4f44ae1f304f92631c035fb9"
+  integrity sha512-RH0qYtGjecgWocputivElMb8ECyi1ZM9+GYn6tzo5ffOVosNQ1F/sand1E3XAl4MlFxamKKEUYu2Z+lpbF2sDw==
   dependencies:
     "@mdx-js/react" "^1.6.16"
     "@reach/skip-nav" "^0.11.2"
@@ -3361,6 +3366,7 @@ nextra-theme-docs@^1.0.3:
     classnames "^2.2.6"
     focus-visible "^5.1.0"
     github-slugger "^1.3.0"
+    grapheme-splitter "^1.0.4"
     intersection-observer "^0.12.0"
     match-sorter "^4.2.0"
     next-themes "^0.0.8"
@@ -3965,13 +3971,6 @@ react-dom@^16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
-
-react-iframe@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/react-iframe/-/react-iframe-1.8.0.tgz#8c78f2c59b894ca5605fa7e45e61e27e57e96091"
-  integrity sha512-NYi89+rEqREwQxW9sDf+akh6/dtwWd3bOjByoVEIQ7SicOxVawRMer3pLdWjFaHXpuxTB9NqobPf/Ohj2iAKkg==
-  dependencies:
-    object-assign "^4.1.1"
 
 react-innertext@^1.1.5:
   version "1.1.5"
