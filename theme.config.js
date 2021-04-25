@@ -7,6 +7,7 @@ export default {
   titleSuffix: ' – BaseQL',
   nextLinks: true,
   prevLinks: true,
+  defaultMenuCollapsed: true,
   search: true,
   customSearch: null,                              // <- customizable, you can use algolia for example
   darkMode: true,
