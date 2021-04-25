@@ -46,3 +46,22 @@ Examples:
 
 - `   déjà vu%  ` -> `dejaVu`
 - `99Ballons` -> `_99Ballons`
+
+### Misc GraphQL
+
+BaseQL currently supports other standard GraphQL fatures such as [Aliases](https://graphql.org/learn/queries/#aliases),  [Fragments](https://graphql.org/learn/queries/#fragments), [Operation Names](https://graphql.org/learn/queries/#operation-name) and [Variables](https://graphql.org/learn/queries/#variables):
+
+<br />
+
+<QueryPlayground disabled={true} fullWidth={true}
+  query={`query Veganism($country: [String] = ["🇺🇸USA"]) {
+vegan: people(vegan: true, country: $country) { ...peopleFields },
+nonVegan: people(vegan: false, country: $country) { ...peopleFields }\n}\n\nfragment peopleFields on people {
+name
+vegan
+country
+friends {
+  name
+  vegan
+  country
+}\n}`}/>
