@@ -16,14 +16,19 @@ When inserting a new record you can get the generated id immediately:
 <Query disabled={true} query={`mutation {
 insert_people(
   name: "John", 
-  vegan: true
+  vegan: true,
+  friends: ["recXYZ789"]
 ) {
-  id, name, vegan
+  id, name, vegan,
+  friends { name }
 }\n}`} code={`{
 insert_people [{
   id: "recABC123",
   name: "John", 
-  vegan: true
+  vegan: true,
+  friends: [
+    { name: "Peter" }
+  ]
 }]\n}`}/>
 
 ## Update
@@ -33,14 +38,22 @@ When updating an existing record you must provide an `id` to locate it along the
 <Query disabled={true} query={`mutation {
 update_people(
   id: "recABC123", # required
-  vegan: false
+  vegan: false,
+  friends: [
+    "recXYZ789", "recDEF456"
+  ]
 ) {
-  id, name, vegan
+  id, name, vegan,
+  friends { name }
 }\n}`} code={`{
 insert_people [{
   id: "recABC123",
   name: "John", 
-  vegan: false
+  vegan: false,
+  friends: [
+    { name: "Peter" },
+    { name: "Rodrick" }
+  ]
 }]\n}`}/>
 
 ## Delete

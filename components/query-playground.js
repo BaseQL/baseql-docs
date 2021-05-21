@@ -3,9 +3,9 @@ import useSWR from 'swr'
 import Query from './query'
 
 const fetcher = query =>
-  request('https://api.baseql.com/airtable/graphql/appuzDcQEvfnkzXjD', query)
+  request(`${process.env.api_url}/airtable/graphql/appuzDcQEvfnkzXjD`, query)
 
-export default function QueryPlayground({query, disabled = false}) {
+export default function QueryPlayground({query, disabled = false, fullWidth}) {
   const { data, error } = useSWR(query, fetcher)
 
   return (
@@ -14,6 +14,7 @@ export default function QueryPlayground({query, disabled = false}) {
       code={JSON.stringify(data, undefined, 2)}
       error={error}
       disabled={disabled}
+      fullWidth={fullWidth}
     />
   )
 }
