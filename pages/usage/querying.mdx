@@ -1,8 +1,27 @@
+import SupportedBy from '../../components/supported-by';
 import QueryPlayground from '../../components/query-playground';
 
 # Querying
 
+### Data Types
+<SupportedBy gsheets={false}/>
+
+BaseQL support querying most Airtable data types, checkout our [`StangerThings` kitchensink base](https://airtable.com/shrjevFPtREOPPxWj):
+
+<br />
+
+<QueryPlayground disabled={true} query={`{
+strangerThings {
+  checkBox
+  rating
+  multiSelect
+  email
+  currency
+  attachments
+}\n}`}/>
+
 ### Relationships & Nested values
+<SupportedBy gsheets={false}/>
 
 You can query nested values at an arbitriary deep level:
 
@@ -19,23 +38,8 @@ people(name: "ben") {
   }
 }\n}`}/>
 
-### Data Types
-
-BaseQL support querying most Airtable data types, checkout our [`StangerThings` kitchensink base](https://airtable.com/shrjevFPtREOPPxWj):
-
-<br />
-
-<QueryPlayground disabled={true} query={`{
-strangerThings {
-  checkBox
-  rating
-  multiSelect
-  email
-  currency
-  attachments
-}\n}`}/>
-
 ### Sanitization
+<SupportedBy />
 
 BaseQL will automatically sanitize table and column names to comply with the [GraphQL Specification](http://spec.graphql.org/June2018/#sec-Names), by:
 - [Deburring](https://lodash.com/docs/4.17.15#deburr) special characters.
@@ -48,8 +52,9 @@ Examples:
 - `99Ballons` -> `_99Ballons`
 
 ### Misc GraphQL
+<SupportedBy />
 
-BaseQL currently supports other standard GraphQL fatures such as [Aliases](https://graphql.org/learn/queries/#aliases),  [Fragments](https://graphql.org/learn/queries/#fragments), [Operation Names](https://graphql.org/learn/queries/#operation-name) and [Variables](https://graphql.org/learn/queries/#variables):
+BaseQL currently supports other standard GraphQL features such as [Aliases](https://graphql.org/learn/queries/#aliases),  [Fragments](https://graphql.org/learn/queries/#fragments), [Operation Names](https://graphql.org/learn/queries/#operation-name) and [Variables](https://graphql.org/learn/queries/#variables):
 
 <br />
 

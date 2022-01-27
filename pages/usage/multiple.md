@@ -1,6 +1,8 @@
+import SupportedBy from '../../components/supported-by';
 import QueryPlayground from '../../components/query-playground';
 
 # Multiple arguments
+<SupportedBy gsheets={false}/>
 
 Combine multiple arguments in a single query:
 

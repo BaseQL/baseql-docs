@@ -1,6 +1,8 @@
+import SupportedBy from '../../components/supported-by';
 import QueryPlayground from '../../components/query-playground';
 
 # Sorting
+<SupportedBy gsheets={false}/>
 
 You can order by single or multiple columns and specify ascending or descending order:
 

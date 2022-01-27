@@ -1,6 +1,8 @@
+import SupportedBy from '../../components/supported-by';
 import QueryPlayground from '../../components/query-playground';
 
 # Pagination
+<SupportedBy gsheets={false}/>
 
 Paginate results using `_page_size` and `_page` number:
 
