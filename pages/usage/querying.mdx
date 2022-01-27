@@ -1,10 +1,15 @@
 import SupportedBy from '../../components/supported-by';
+import Callout from 'nextra-theme-docs/callout'
 import QueryPlayground from '../../components/query-playground';
 
 # Querying
 
 ### Data Types
 <SupportedBy gsheets={false}/>
+
+<Callout emoji={(<img width="16" src="/gsheets-icon-64.png" style={{display: 'inline'}} title="google sheets"/>)}>
+  Google Spreadsheets will always return data as `String` values
+</Callout>
 
 BaseQL support querying most Airtable data types, checkout our [`StangerThings` kitchensink base](https://airtable.com/shrjevFPtREOPPxWj):
 
