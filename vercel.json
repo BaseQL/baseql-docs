@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/playground",
+      "destination": "/playground/airtable",
+      "permanent": false
+    }
+  ]
+}
