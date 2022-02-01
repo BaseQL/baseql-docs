@@ -1,11 +1,11 @@
 {
   "explorer": "Explorer",
+  "settings": "Settings",
   "querying": "Querying",
   "filtering": "Filtering",
   "sorting": "Sorting",
   "pagination": "Pagination",
   "multiple": "Multiple arguments",
-  "settings": "Settings",
   "mutations": "Mutations",
   "aggregation": "Aggregation",
   "search": "Full-text Search",
