@@ -1,3 +1,4 @@
+import Callout from 'nextra-theme-docs/callout'
 import SupportedBy from '../../components/supported-by';
 
 # Settings
@@ -22,3 +23,12 @@ It's recommended to enable secret token protection when using mutations
 
 [See Mutations docs](/usage/mutations)
 
+## Delete Base!
+
+You can completely remove your base from our system.
+
+You can always re-create it again.
+
+<Callout emoji="️❗️">
+  Deleting the base will effectively delete the GraphQL endpoint.
+</Callout>
