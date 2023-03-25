@@ -1,11 +1,11 @@
 import Bleed from 'nextra-theme-docs/bleed'
 
-# Live Playground
+# <img width="48" src="/airtable-icon-192.png" style={{display: 'inline'}} /> Airtable Live Playground
 
-Get a feel of BaseQL features by directly querying our showcase base from Airtabls:
+Get a feel of BaseQL features by directly querying our showcase base from <img width="16" src="/airtable-icon-192.png" style={{display: 'inline'}} /> Airtable:
 
 <Bleed full>
-  <iframe width="100%" height="430" src="https://app.baseql.com/demos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+  <iframe width="100%" height="430" src="https://app.baseql.com/demos?source=airtable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
 </Bleed>
 
 ### Base:
