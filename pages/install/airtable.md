@@ -1,21 +1,40 @@
+import Callout from 'nextra-theme-docs/callout'
+
 # <img width="48" src="/airtable-icon-192.png" style={{display: 'inline'}} /> Airtable
 
 To connect to Airtable you have two options:
 
-## Free Plan
+## Installation
 
 - Signup/Login to [BaseQL app](https://app.baseql.com/)
-- Click `+Add New Data Source` > `Airtable (FREE)`
-- Input your [`Airtable API Key`](https://airtable.com/account) and click `Fetch Bases`
+- Click `+Add New Data Source` > `Airtable`
+- Create a [`Personal Access Token`](https://airtable.com/create/tokens)
+  - Allow `data.records:read` & `schema.bases:read` scopes
+  - If you're planning to use [mutations](/usage/mutations) allow `data.records:write` scope too
+- Click  `Fetch Bases`
 - Select your desired base from the list
 
 <br />
-<img width="300" src="/add_airtable.gif"></img>
+<img width="600" src="/pat_setup.png"></img>
+<img width="600" src="/airtable_setup.png"></img>
 
-## Pro Plan
+### API Key deprecation
 
-With a Pro Plan you can use BaseQL directly inside Airtable via Marketplace:
+<Callout emoji="⚠️">
+  <b>API keys will be deprecated by the end of January 2024</b>
+  After this date, API keys will stop working and you will have to migrate to personal access tokens. Personal access tokens allow you to more securely grant API access to Airtable data.
+  <br />
+  <a href="https://airtable.com/developers/web/guides/personal-access-tokens" target="_blank" className="underline">Learn more</a>
+</Callout>
 
-[<img width="112" src="https://user-images.githubusercontent.com/119117/99312204-516d0e00-2823-11eb-8e48-a6161356108d.png"></img>](https://airtable.com/marketplace/blkJ16czOGRAFvBFg/baseql)
+#### Update personal access token
+
+In case you change your token you can update it by following the exact same process [as described above](#installation)
+
+## Extension
+
+With an [Airtable Plan](https://airtable.com/pricing) you can use BaseQL directly inside Airtable via our Extension:
 
 https://airtable.com/marketplace/blkJ16czOGRAFvBFg/baseql
+
+[<img width="360" src="/extension.png"></img>](https://airtable.com/marketplace/blkJ16czOGRAFvBFg/baseql)
