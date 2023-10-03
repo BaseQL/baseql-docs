@@ -1,5 +1,5 @@
 import SupportedBy from '../../components/supported-by';
-import Callout from 'nextra-theme-docs/callout'
+import { Callout, Steps } from 'nextra/components'
 import QueryPlayground from '../../components/query-playground';
 
 # Querying
@@ -7,7 +7,7 @@ import QueryPlayground from '../../components/query-playground';
 ### Data Types
 <SupportedBy gsheets={false}/>
 
-<Callout emoji={(<img width="16" src="/gsheets-icon-64.png" style={{display: 'inline'}} title="google sheets"/>)}>
+<Callout type="info" emoji={(<img width="16" src="/gsheets-icon-64.png" style={{display: 'inline'}} title="google sheets"/>)}>
   Google Spreadsheets will always return data as `String` values
 </Callout>
 
@@ -15,15 +15,15 @@ BaseQL support querying most Airtable data types, checkout our [`StangerThings` 
 
 <br />
 
-<QueryPlayground disabled={true} query={`{
-strangerThings {
-  checkBox
-  rating
-  multiSelect
-  email
-  currency
-  attachments
-}\n}`}/>
+<QueryPlayground query={`{
+  strangerThings {
+    checkBox
+    rating
+    multiSelect
+    email
+    currency
+    attachments
+  }\n}`}/>
 
 ### Relationships & Nested values
 <SupportedBy gsheets={false}/>
@@ -32,16 +32,16 @@ You can query nested values at an arbitriary deep level:
 
 <br />
 
-<QueryPlayground disabled={true} query={`{
-people(name: "ben") {
-  name
-  friends {
+<QueryPlayground query={`{
+  people(name: "ben") {
     name
     friends {
       name
+      friends {
+        name
+      }
     }
-  }
-}\n}`}/>
+  }\n}`}/>
 
 ### Sanitization
 <SupportedBy />
@@ -63,15 +63,15 @@ BaseQL currently supports other standard GraphQL features such as [Aliases](http
 
 <br />
 
-<QueryPlayground disabled={true} fullWidth={true}
+<QueryPlayground fullWidth={true}
   query={`query Veganism($country: [String] = ["🇺🇸USA"]) {
-vegan: people(vegan: true, country: $country) { ...peopleFields },
-nonVegan: people(vegan: false, country: $country) { ...peopleFields }\n}\n\nfragment peopleFields on people {
-name
-vegan
-country
-friends {
+  vegan: people(vegan: true, country: $country) { ...peopleFields },
+  nonVegan: people(vegan: false, country: $country) { ...peopleFields }\n}\n\nfragment peopleFields on people {
   name
   vegan
   country
-}\n}`}/>
+  friends {
+    name
+    vegan
+    country
+  }\n}`}/>

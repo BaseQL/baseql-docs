@@ -1,17 +1,19 @@
-import { Fragment } from 'react'
-import Highlight, { defaultProps } from 'prism-react-renderer'
+import { Highlight, themes } from 'prism-react-renderer'
 
-export default function QueryHighlighter({code, theme}) {
+export default function QueryHighlighter({code, theme = themes.shadesOfPurple, language = "graphql", extraStyle}) {
   return (
-    <Highlight {...defaultProps} theme={theme} code={code} language="graphql">
+    <Highlight theme={theme} code={code} language={language} >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <Fragment>
+        <pre style={{...style, ...extraStyle}}>
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => <span {...getTokenProps({ token, key })} />)}
+            <div key={i} {...getLineProps({ line })}>
+              {/* <span>{i + 1}</span> */}
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token })} />
+              ))}
             </div>
           ))}
-        </Fragment>
+        </pre>
       )}
     </Highlight>
   )

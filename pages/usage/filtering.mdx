@@ -10,27 +10,27 @@ Basic filtering by field(s) values:
 
 <br />
 
-<QueryPlayground disabled={true} query={`{
-people(
-  country: "🇺🇸USA", 
-  vegan: true
-) {
-  name
-}\n}`}/>
+<QueryPlayground query={`{
+  people(
+    country: "🇺🇸USA", 
+    vegan: true
+  ) {
+    name
+  }\n}`}/>
 
 You can also filter List-based values such as Multi-selects, Lookups and Relationships (by default an AND operation, if you need more advanced filtering see DSL below):
 
 <br />
 
-<QueryPlayground disabled={true} query={`{
-people(
-  friends: ["daniel", "peter"]
-) {
-  name
-  friends {
+<QueryPlayground query={`{
+  people(
+    friends: ["daniel", "peter"]
+  ) {
     name
-  }
-}\n}`}/>
+    friends {
+      name
+    }
+  }\n}`}/>
 
 ## Advanced DSL
 <SupportedBy />
@@ -39,22 +39,22 @@ We support a filtering DSL similar to [MongoDB](https://docs.mongodb.com/manual/
 
 <br />
 
-<QueryPlayground disabled={true} query={`{
-people(_filter: {
-  _and: [
-    {
-      _or: [
-        {vegan: {_eq: true}}
-        {city: {_nin: ["Los Angeles", "Monterrey"]}}
-      ]
-    },
-    {
-      netWorth: {_gte: 5000}
-    }
-  ]
-}) {
-  name
-}\n}`}/>
+<QueryPlayground query={`{
+  people(_filter: {
+    _and: [
+      {
+        _or: [
+          {vegan: {_eq: true}}
+          {city: {_nin: ["Los Angeles", "Monterrey"]}}
+        ]
+      },
+      {
+        netWorth: {_gte: 5000}
+      }
+    ]
+  }) {
+    name
+  }\n}`}/>
 
 ### Supported Operators
 

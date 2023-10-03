@@ -1,0 +1,69 @@
+import { Callout, Steps } from 'nextra/components'
+import Query from '../../components/query';
+
+# Mutations
+
+<Callout emoji="️❗️">
+  Mutations are disabled by default. If you want to protect them from the outside world consider enabling your [Secret Token](/usage/settings) as well
+</Callout>
+
+Create, update and delete records
+
+## Insert
+
+When inserting a new record you can get the generated id immediately:
+
+<Query disabled={true} query={`mutation {
+  insert_people(
+    name: "John", 
+    vegan: true,
+    friends: ["recXYZ789"]
+  ) {
+    id, name, vegan,
+    friends { name }
+  }\n}`} code={`{
+  insert_people [{
+    id: "recABC123",
+    name: "John", 
+    vegan: true,
+    friends: [
+      { name: "Peter" }
+    ]
+  }]\n}`}/>
+
+## Update
+
+When updating an existing record you must provide an `id` to locate it along the attributes to be updated:
+
+<Query disabled={true} query={`mutation {
+  update_people(
+    id: "recABC123", # required
+    vegan: false,
+    friends: [
+      "recXYZ789", "recDEF456"
+    ]
+  ) {
+    id, name, vegan,
+    friends { name }
+  }\n}`} code={`{
+  insert_people [{
+    id: "recABC123",
+    name: "John", 
+    vegan: false,
+    friends: [
+      { name: "Peter" },
+      { name: "Rodrick" }
+    ]
+  }]\n}`}/>
+
+## Delete
+
+When deleting a record only an `id` is needed:
+
+<Query disabled={true} query={`mutation {
+  delete_people(
+    id: "recABC123", # required
+  ) { }\n}`} code={`{
+  insert_people [{
+    id: "recABC123"
+  }]\n}`}/>

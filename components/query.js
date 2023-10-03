@@ -1,12 +1,11 @@
-import QueryEditor from './query-editor';
 import QueryHighlighter from './query-highlighter'
+import { themes } from 'prism-react-renderer';
 import Loading from './loading'
-import theme from 'prism-react-renderer/themes/github'
 
 const styles = {
  split: {
-   width: '100%',
    maxHeight: '300px',
+   width: '100%',
    display: 'flex',
    flexDirection: 'row',
    alignItems: 'stretch'
@@ -15,34 +14,32 @@ const styles = {
   flexDirection: 'column',
   alignItems: 'stretch'
  },
- query: {
-  maxHeight: '300px',
- },
- results: {
+ code: {
   whiteSpace: 'pre-wrap',
+  maxHeight: '300px',
+  boxSizing: 'border-box',
+  fontFamily: '"Dank Mono", "Fira Code", monospace',
+  borderRadius: '8px',
   flex: 1,
+  overflow: 'scroll',
   margin: '4px',
   padding: '10px',
-  fontFamily: '"Dank Mono", "Fira Code", monospace',
-  maxHeight: '300px',
- } 
+ }
 }
 
-export default function Query({query, code, error, disabled = false, fullWidth = false}) {
+export default function Query({query, code, error, fullWidth = false}) {
   return (
     <div  style={fullWidth ? styles.fullWidth : styles.split}>
-      <QueryEditor query={query} disabled={disabled} style={styles.query}/>
-      <pre style={styles.results}>
-        {!code && !error && <Loading />}
-        {!!code && (
-          <QueryHighlighter code={code} theme={theme} />
-        )}
-        {!!error && (
-          <div>❌ Error: 
-            <QueryHighlighter code={code} theme={theme} />
-          </div>
-        )}
-      </pre>
+      <QueryHighlighter code={query} theme={themes.okaidia} extraStyle={styles.code}/>
+      {!code && !error && <Loading />}
+      {!!code && (
+        <QueryHighlighter code={code} theme={themes.github} language="jsx" extraStyle={styles.code}/>
+      )}
+      {!!error && (
+        <div>❌ Error: 
+          <QueryHighlighter code={code} theme={themes.github} language="jsx" extraStyle={styles.code}/>
+        </div>
+      )}
     </div>
   )
 }
