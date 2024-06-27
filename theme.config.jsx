@@ -38,7 +38,7 @@ export default {
   darkMode: true,
   footer: {
     text: (
-      <span>Copyright 2024 © <a href="https://www.baseql.com/" target="_blank">BaseQL</a></span>
+      <span>Copyright 2024 © <a href="https://baseql.com/" target="_blank">BaseQL</a></span>
     )
   },
   logo: (
