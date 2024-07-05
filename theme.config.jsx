@@ -20,12 +20,6 @@ export default {
     )
   },
   banner: {
-    key: 'airtable-api-keys-deprecation',
-    text: (
-      <a href="/install/airtable#api-key-deprecation">
-        ❗️ Airtable API keys will be deprecated by the end of January 20. Read more →
-      </a>
-    )
   },
   sidebar: {
     defaultMenuCollapseLevel: 1,
