@@ -51,10 +51,13 @@ BaseQL will automatically sanitize table and column names to comply with the [Gr
 - Trim spaces by [camelCase](https://lodash.com/docs/4.17.15#camelCase)’ing 
 - Prepending an underscore when it starts with a number
 
+In addition, BaseQL will sanitize field names which collide with reserved fields. Currently the only reserved field is the `id` field.
+
 Examples:
 
 - `   déjà vu%  ` -> `dejaVu`
 - `99Ballons` -> `_99Ballons`
+- `ID` -> `_id`
 
 ### Misc GraphQL
 <SupportedBy />
