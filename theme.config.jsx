@@ -32,7 +32,7 @@ export default {
   darkMode: true,
   footer: {
     text: (
-      <span>Copyright 2024 © <a href="https://baseql.com/" target="_blank">BaseQL</a></span>
+      <span>Copyright {new Date().getFullYear()} © <a href="https://baseql.com/" target="_blank">BaseQL</a></span>
     )
   },
   logo: (
