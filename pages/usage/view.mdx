@@ -1,0 +1,42 @@
+import SupportedBy from '../../components/supported-by';
+import QueryPlayground from '../../components/query-playground';
+
+# Querying Views
+<SupportedBy airtable={true} gsheets={false}/>
+
+The `_view` parameter allows you to query records from a specific view in your Airtable base. When specified, only records from that view will be returned, maintaining the view's sorting unless overridden by `_order_by`.
+
+<br />
+
+<QueryPlayground query={`{
+  people(_view: "Custom Sort") {
+    name
+  }\n}`}/>
+
+### Example with Multiple Parameters
+
+<br />
+
+<QueryPlayground query={`{
+  people(
+    _view: "Custom Sort",
+    _page_size: 2,
+    _filter: {vegan: true}
+  ) {
+    name
+    vegan
+  }\n}`}/>
+
+## View Details
+
+Here's the view being queried in the example above:
+
+<iframe 
+  class="airtable-embed" 
+  src="https://airtable.com/embed/appuzDcQEvfnkzXjD/shry6jtJnenBvsVBL?viewControls=on" 
+  frameborder="0" 
+  onmousewheel="" 
+  width="100%" 
+  height="533" 
+  style={{background: 'transparent', border: '1px solid #ccc'}}
+/>

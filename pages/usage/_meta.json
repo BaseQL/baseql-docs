@@ -4,6 +4,7 @@
   "querying": "Querying",
   "filtering": "Filtering",
   "sorting": "Sorting",
+  "view": "Querying views",
   "pagination": "Pagination",
   "multiple": "Multiple arguments",
   "mutations": "Mutations",
