@@ -8,8 +8,8 @@
   "pagination": "Pagination",
   "multiple": "Multiple arguments",
   "mutations": "Mutations",
+  "related-record-arguments": "Filtering & Sorting Related Records",
   "aggregation": "Aggregation",
   "search": "Full-text Search",
-  "caching": "Caching",
-  "related-record-arguments": "Filtering & Sorting Related Records"
+  "caching": "Caching"
 }
