@@ -10,5 +10,6 @@
   "mutations": "Mutations",
   "aggregation": "Aggregation",
   "search": "Full-text Search",
-  "caching": "Caching"
+  "caching": "Caching",
+  "related-record-arguments": "Filtering & Sorting Related Records"
 }

@@ -1,0 +1,49 @@
+import SupportedBy from '../../components/supported-by';
+import QueryPlayground from '../../components/query-playground';
+
+# Filtering & Sorting Related Records
+<SupportedBy airtable={true} gsheets={false}/>
+
+BaseQL supports filtering, pagination, and sorting arguments on nested relation fields, giving you precise control over how related data is fetched.
+
+## Example Query
+
+<QueryPlayground query={`{
+  people(name: "Rob") {
+    name
+    friends(
+      _filter: { vegan: true }
+      _order_by: { name: "asc" }
+      _page_size: 2
+      _page: 1
+    ) {
+      name
+      vegan
+      city {
+        name
+      }
+    }
+  }
+}`}/>
+
+This query:
+1. Finds people named "Rob"
+2. Gets their friends who are vegan
+3. Orders those friends by name in ascending order
+4. Returns the first 2 friends from page 1
+
+## Available Arguments
+
+All nested relation fields support these arguments:
+
+| Argument | Description |
+|----------|-------------|
+| `_filter` | Filter related records using the same syntax as root-level filters |
+| `_order_by` | Sort related records by one or more fields |
+| `_page_size` | Number of related records to return per page |
+| `_page` | Which page of related records to return |
+
+For detailed syntax on each argument type, see:
+- [Filtering](/usage/filtering)
+- [Sorting](/usage/sorting)
+- [Pagination](/usage/pagination) 
