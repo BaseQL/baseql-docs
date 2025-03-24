@@ -1,4 +1,4 @@
-{
+export default {
   "explorer": "Explorer",
   "settings": "Settings",
   "querying": "Querying",
@@ -12,4 +12,4 @@
   "aggregation": "Aggregation",
   "search": "Full-text Search",
   "caching": "Caching"
-}
+} 
