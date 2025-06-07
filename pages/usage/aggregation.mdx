@@ -1,7 +1,168 @@
+import SupportedBy from '../../components/supported-by';
 import { Callout, Steps } from 'nextra/components'
+import QueryPlayground from '../../components/query-playground';
 
 # Aggregation
 
-<Callout emoji="🚧">
-  Coming soon...
+
+BaseQL's aggregation feature provides powerful counting capabilities across your data, enabling you to build analytics dashboards, implement pagination, and gather insights without loading full record data.
+
+## Getting Access
+
+This feature is currently in preview - contact `support@baseql.com` to request early access.
+
+## Supported Data Sources
+<SupportedBy airtable={true} gsheets={false}/>
+
+## Root Aggregations
+
+Access `_aggregates` at the query root to count records across entire tables:
+
+<br />
+
+<QueryPlayground query={`{
+    _aggregates {
+      people {
+        count
+      }
+      cities {
+        count  
+      }
+    }
+  }`}/>
+
+This returns the total count of records in each specified table, perfect for dashboard metrics and overview statistics.
+
+## Relation Aggregations
+
+Access `_aggregates` on individual records to count related records:
+
+<br />
+
+<QueryPlayground query={`{
+    people(name: "ben") {
+      name
+      _aggregates {
+        friends {
+          count
+        }
+      }
+    }
+  }`}/>
+
+This allows you to count related records for each parent record, enabling rich data insights and relationship analysis.
+
+## Filtering Support
+
+Both aggregation types support the same powerful filtering options as regular queries.
+
+### Direct Field Arguments
+
+Filter aggregations using direct field arguments:
+
+<br />
+
+<QueryPlayground query={`{
+    _aggregates {
+      people(vegan: true) {
+        count
+      }
+    }
+  }`}/>
+
+### Complex Filters with `_filter`
+
+Use the advanced filtering DSL for complex conditions:
+
+<br />
+
+<QueryPlayground query={`{
+    _aggregates {
+      people(_filter: { 
+        _and: [
+          { vegan: { _eq: true } },
+          { netWorth: { _gte: 5000 } }
+        ]
+      }) {
+        count
+      }
+    }
+  }`}/>
+
+### Relation Filtering
+
+Apply filters to relation-level aggregations:
+
+<QueryPlayground query={`{
+    people {
+      name
+      _aggregates {
+        friends(_filter: { vegan: { _eq: true } }) {
+          count
+        }
+      }
+    }
+}`}/>
+
+## Use Cases
+
+### Pagination
+Get total counts for implementing pagination UI:
+
+<QueryPlayground query={`{
+    _aggregates {
+      people {
+        count
+      }
+    }
+    people(_page_size: 3, _page: 1) {
+      name
+    }
+  }`}/>
+
+### Analytics Dashboard
+Display summary statistics across multiple tables:
+
+<br />
+
+<QueryPlayground query={`{
+    _aggregates {
+      allPeople: people {
+        count
+      }
+      veganPeople: people(vegan: true) {
+        count
+      }
+      cities {
+        count
+      }
+    }
+  }`}/>
+
+### Multiple Aggregations
+Combine multiple aggregations in a single query using aliases:
+
+<br />
+
+<QueryPlayground query={`{
+    _aggregates {
+      allPeople: people {
+        count
+      }
+      veganPeople: people(vegan: true) {
+        count
+      }
+      wealthyVegans: people(_filter: {
+        _and: [
+          { vegan: { _eq: true } },
+          { netWorth: { _gte: 10000 } }
+        ]
+      }) {
+        count
+      }
+    }
+  }`}/>
+
+<Callout type="info">
+  **Need Help?** If you have questions about aggregations or need assistance with your specific use case, reach out to `support@baseql.com`.
 </Callout>
