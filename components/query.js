@@ -37,7 +37,7 @@ export default function Query({query, code, error, fullWidth = false}) {
       )}
       {!!error && (
         <div>❌ Error: 
-          <QueryHighlighter code={code} theme={themes.github} language="jsx" extraStyle={styles.code}/>
+          <QueryHighlighter code={String(error?.message ?? error)} theme={themes.github} language="jsx" extraStyle={styles.code}/>
         </div>
       )}
     </div>
