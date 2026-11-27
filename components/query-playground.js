@@ -1,3 +1,5 @@
+'use client'
+
 import { request } from 'graphql-request'
 import useSWR from 'swr'
 import Query from './query'

@@ -1,9 +1,7 @@
 import nextra from 'nextra'
 
-const withNextra = nextra({
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.tsx'
-})
+// Nextra 4: theme options moved to app/layout.tsx, MDX pages live in content/
+const withNextra = nextra({})
 
 export default withNextra({
   env: {

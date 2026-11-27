@@ -3,20 +3,31 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "start": "next start"
+    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
+    "start": "next start",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "graphql": "^15.4.0",
     "graphql-request": "^3.3.0",
-    "next": "^14.2.30",
-    "nextra": "^3.3.1",
-    "nextra-theme-docs": "^3.3.1",
+    "next": "^15.5.29",
+    "nextra": "^4.6.1",
+    "nextra-theme-docs": "^4.6.1",
     "prism-react-renderer": "^2.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "swr": "^2.2.4"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "swr": "^2.5.1"
   },
   "devDependencies": {
-    "@types/node": "22.13.11"
+    "@types/node": "22.13.11",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "pagefind": "^1.6.0",
+    "patch-package": "^8.0.1",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.23",
+    "katex": "^0.18.2"
   }
 }

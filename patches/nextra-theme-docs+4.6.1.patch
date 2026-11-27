@@ -1,0 +1,21 @@
+diff --git a/node_modules/nextra-theme-docs/dist/layout.js b/node_modules/nextra-theme-docs/dist/layout.js
+index 57a511f..f675a3f 100644
+--- a/node_modules/nextra-theme-docs/dist/layout.js
++++ b/node_modules/nextra-theme-docs/dist/layout.js
+@@ -27,7 +27,7 @@ const Layout = (t0) => {
+     const {
+       data: t12,
+       error
+-    } = LayoutPropsSchema.safeParse(themeConfig);
++    } = LayoutPropsSchema.safeParse({ ...themeConfig, children: null });
+     data = t12;
+     if (error) {
+       throw z.prettifyError(error);
+@@ -52,6 +52,7 @@ const Layout = (t0) => {
+       banner,
+       ...rest
+     } = data);
++    delete rest.children;
+     $[5] = data;
+     $[6] = banner;
+     $[7] = footer;
